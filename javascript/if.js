@@ -10,6 +10,27 @@
 
 const prompt = require("prompt-sync")();
 
+// let userPassword = prompt("Enter password: ");
+// function isUpper() {
+//     return /[A-Z]/.test(userPassword);
+// }
+// function isLower() {
+//     return /[a - z]/.test(userPassword);
+// }
+// function isDigit() {
+//     return /\d/.test(userPassword);
+// }
+// function checklength() {
+//     return userPassword.length >= 8;
+// }
+
+// if(checklength && isDigit() && isLower() && isUpper()) {
+//     console.log("You have a strong Password")
+// } else {
+//     console.log("Password is weak!")
+// }
+
+//using ternary operators instead
 let userPassword = prompt("Enter password: ");
 function isUpper() {
     return /[A-Z]/.test(userPassword);
@@ -24,8 +45,4 @@ function checklength() {
     return userPassword.length >= 8;
 }
 
-if(checklength && isDigit() && isLower() && isUpper()) {
-    console.log("You have a strong Password")
-} else {
-    console.log("Password is weak!")
-}
+checklength && isDigit() && isLower() && isUpper()? console.log("You have a strong Password"): console.log("Password is weak!");
